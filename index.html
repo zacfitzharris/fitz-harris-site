@@ -3,309 +3,271 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zac Fitz-Harris | Professional Profile</title>
-  <meta name="description" content="Zac Fitz-Harris — professional profile, LinkedIn, Instagram, and contact details." />
+  <title>Zac Fitz-Harris</title>
+  <meta name="description" content="Zac Fitz-Harris — professional profile and contact links." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #0b0d10;
-      --panel: rgba(255,255,255,0.075);
-      --panel-strong: rgba(255,255,255,0.12);
-      --border: rgba(255,255,255,0.16);
-      --text: #f7f3ed;
-      --muted: #b9b3aa;
-      --accent: #d7b56d;
-      --accent-dark: #b89245;
-      --shadow: rgba(0,0,0,0.38);
+      --bg: #090a0c;
+      --text: #f4efe7;
+      --muted: #a9a199;
+      --line: rgba(255,255,255,0.12);
+      --panel: rgba(255,255,255,0.055);
+      --gold: #d2b16f;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       min-height: 100vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 10% 10%, rgba(215,181,109,0.18), transparent 28%),
-        radial-gradient(circle at 90% 0%, rgba(255,255,255,0.08), transparent 28%),
-        linear-gradient(135deg, #0b0d10 0%, #14171d 54%, #08090b 100%);
-      line-height: 1.5;
+        radial-gradient(circle at 12% 18%, rgba(210,177,111,0.13), transparent 30%),
+        linear-gradient(135deg, #07080a 0%, #111318 58%, #07080a 100%);
     }
 
-    a { color: inherit; }
-
     .page {
-      width: min(1120px, calc(100% - 40px));
+      width: min(1160px, calc(100% - 48px));
       margin: 0 auto;
     }
 
     header {
+      height: 92px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
     }
 
     .brand {
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      font-size: 1.1rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
     }
 
     nav {
       display: flex;
-      gap: 18px;
-      color: var(--muted);
-      font-size: 0.95rem;
+      gap: 28px;
+      font-size: 0.9rem;
     }
 
     nav a {
+      color: var(--muted);
       text-decoration: none;
     }
 
-    nav a:hover { color: var(--text); }
+    nav a:hover {
+      color: var(--text);
+    }
 
-    .hero {
-      min-height: calc(100vh - 90px);
+    main {
+      min-height: calc(100vh - 160px);
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1fr 0.88fr;
+      gap: 72px;
       align-items: center;
-      gap: 44px;
-      padding: 42px 0 70px;
+      padding: 64px 0;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
+      gap: 9px;
       color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 20px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.035);
+      padding: 9px 15px;
+      border-radius: 999px;
+      margin-bottom: 30px;
+      font-size: 0.92rem;
     }
 
     .dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 18px rgba(215,181,109,0.9);
+      background: var(--gold);
     }
 
     h1 {
-      font-size: clamp(3.2rem, 8vw, 6.6rem);
-      line-height: 0.9;
-      letter-spacing: -0.075em;
-      margin-bottom: 24px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(5.2rem, 10vw, 8.4rem);
+      font-weight: 600;
+      line-height: 0.82;
+      letter-spacing: -0.055em;
+      margin-bottom: 30px;
     }
 
     .intro {
+      max-width: 480px;
       color: var(--muted);
-      max-width: 620px;
-      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-      margin-bottom: 32px;
+      font-size: 1.2rem;
+      line-height: 1.55;
+      margin-bottom: 36px;
     }
 
     .actions {
       display: flex;
-      flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 34px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
 
     .btn {
+      min-height: 54px;
+      padding: 0 28px;
+      border-radius: 999px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 52px;
-      padding: 0 22px;
-      border-radius: 999px;
-      font-weight: 800;
       text-decoration: none;
-      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+      font-weight: 650;
+      transition: transform 0.18s ease, opacity 0.18s ease, border-color 0.18s ease;
     }
 
-    .btn:hover { transform: translateY(-2px); }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
 
-    .btn.primary {
-      background: var(--accent);
+    .primary {
+      background: var(--gold);
       color: #111;
     }
 
-    .btn.primary:hover { background: #e1c27c; }
+    .secondary {
+      color: var(--text);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.035);
+    }
 
-    .btn.secondary {
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.06);
+    .secondary:hover {
+      border-color: rgba(255,255,255,0.28);
+    }
+
+    .email {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      font-size: 0.96rem;
+    }
+
+    .email:hover {
       color: var(--text);
     }
 
-    .btn.secondary:hover { border-color: rgba(255,255,255,0.32); }
-
-    .mini-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .mini-links a { text-decoration-color: rgba(255,255,255,0.28); text-underline-offset: 4px; }
-    .mini-links a:hover { color: var(--text); }
-
-    .profile-card {
+    .portrait {
       position: relative;
       padding: 18px;
       border-radius: 34px;
+      border: 1px solid var(--line);
       background: var(--panel);
-      border: 1px solid var(--border);
-      box-shadow: 0 28px 90px var(--shadow);
-      backdrop-filter: blur(24px);
+      box-shadow: 0 32px 90px rgba(0,0,0,0.42);
     }
 
-    .profile-card img {
-      display: block;
+    .portrait img {
       width: 100%;
       aspect-ratio: 4 / 5;
       object-fit: cover;
+      display: block;
       border-radius: 24px;
-      background: rgba(255,255,255,0.08);
     }
 
-    .profile-caption {
+    .caption {
       position: absolute;
       left: 34px;
       right: 34px;
       bottom: 34px;
-      padding: 18px;
+      padding: 18px 20px;
       border-radius: 20px;
-      background: rgba(9,10,13,0.76);
-      border: 1px solid rgba(255,255,255,0.14);
-      backdrop-filter: blur(16px);
+      background: rgba(5,6,8,0.72);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(14px);
     }
 
-    .profile-caption strong { display: block; font-size: 1.05rem; }
-    .profile-caption span { color: var(--muted); font-size: 0.92rem; }
-
-    section {
-      padding: 70px 0;
-      border-top: 1px solid rgba(255,255,255,0.1);
+    .caption strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 3px;
     }
 
-    .section-title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1;
-      letter-spacing: -0.055em;
-      margin-bottom: 18px;
-    }
-
-    .section-text {
+    .caption span {
       color: var(--muted);
-      max-width: 760px;
-      font-size: 1.08rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 30px;
-    }
-
-    .tile {
-      padding: 24px;
-      border-radius: 24px;
-      background: var(--panel);
-      border: 1px solid var(--border);
-    }
-
-    .tile h3 {
-      margin-bottom: 10px;
-      letter-spacing: -0.03em;
-    }
-
-    .tile p { color: var(--muted); }
-
-    .contact-box {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 28px;
-      border-radius: 28px;
-      background: var(--panel-strong);
-      border: 1px solid var(--border);
+      font-size: 0.9rem;
     }
 
     footer {
-      padding: 28px 0 42px;
-      color: rgba(255,255,255,0.48);
-      font-size: 0.92rem;
+      border-top: 1px solid var(--line);
+      padding: 28px 0 38px;
+      color: rgba(255,255,255,0.42);
+      font-size: 0.88rem;
     }
 
-    @media (max-width: 820px) {
-      header { align-items: flex-start; gap: 16px; }
-      nav { display: none; }
-      .hero { grid-template-columns: 1fr; padding-top: 28px; }
-      .profile-card { max-width: 420px; margin: 0 auto; }
-      .grid { grid-template-columns: 1fr; }
-      section { padding: 54px 0; }
+    @media (max-width: 860px) {
+      nav {
+        display: none;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+        gap: 44px;
+        padding: 40px 0 64px;
+      }
+
+      h1 {
+        font-size: clamp(4.6rem, 18vw, 6.8rem);
+      }
+
+      .portrait {
+        max-width: 430px;
+        margin: 0 auto;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <header>
       <div class="brand">Zac Fitz-Harris</div>
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#links">Links</a>
-        <a href="#contact">Contact</a>
+      <nav>
+        <a href="https://www.linkedin.com/in/zacfh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/zac_kretzrealestate" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:zac@fitz-harris.com">Contact</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero" aria-label="Introduction">
-        <div>
-          <div class="eyebrow"><span class="dot"></span> Brussels • Belgium</div>
-          <h1>Zac<br />Fitz-Harris</h1>
-          <p class="intro">
-            Professional profile, contact, and selected links.
-          </p>
+      <section>
+        <div class="eyebrow"><span class="dot"></span> Brussels • Belgium</div>
 
-          <div class="actions" id="links">
-            <a class="btn primary" href="https://www.linkedin.com/in/zacfh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="btn secondary" href="https://www.instagram.com/zac_kretzrealestate" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </div>
+        <h1>Zac<br>Fitz-Harris</h1>
 
-          <div class="mini-links">
-            <a href="mailto:zac@fitz-harris.com">zac@fitz-harris.com</a>
-          </div>
+        <p class="intro">Professional profile, contact, and selected links.</p>
+
+        <div class="actions">
+          <a class="btn primary" href="https://www.linkedin.com/in/zacfh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn secondary" href="https://www.instagram.com/zac_kretzrealestate" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
 
-        <aside class="profile-card" aria-label="Profile photo">
-          <img src="avatar.jpg" alt="Portrait of Zac Fitz-Harris" />
-          <div class="profile-caption">
-            <strong>Zac Fitz-Harris</strong>
-            <span>Professional profile</span>
-          </div>
-        </aside>
+        <a class="email" href="mailto:zac@fitz-harris.com">zac@fitz-harris.com</a>
       </section>
 
-      <section id="contact">
-        <div class="contact-box">
-          <div>
-            <h2 class="section-title" style="margin-bottom: 8px;">Get in touch</h2>
-            <p class="section-text">For enquiries or opportunities, contact me by email.</p>
-          </div>
-          <a class="btn primary" href="mailto:zac@fitz-harris.com">Email Zac</a>
+      <aside class="portrait">
+        <img src="avatar.jpg" alt="Zac Fitz-Harris">
+        <div class="caption">
+          <strong>Zac Fitz-Harris</strong>
+          <span>Professional profile</span>
         </div>
-      </section>
+      </aside>
     </main>
 
     <footer>© <span id="year"></span> Zac Fitz-Harris</footer>
@@ -315,9 +277,4 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
-</html> Fitz-Harris. All rights reserved.</footer>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
- 
+</html>
